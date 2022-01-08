@@ -1,0 +1,26 @@
+.fun-fact{
+    @include grid(25rem);
+    background: $light-bg;
+    gap: 2.5rem;
+
+    .box{
+        @include flex(center, flex-start);
+        gap: 2.5rem;
+
+        img{
+            height: 10rem;
+        }
+
+        .info{
+
+            h3{
+                @include titleText(4rem);
+            }
+
+            p{
+                @include graphText(1.5rem);
+                padding-top: .5rem;
+            }
+        }
+    }
+}

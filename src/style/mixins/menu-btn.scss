@@ -1,0 +1,16 @@
+#menu-btn{
+    font-size: 3rem;
+    cursor: pointer;
+    color: $black;
+    display: none;
+
+    @media(max-width:768px){
+
+        display: inline-block;
+
+        &.fa-times{
+            transform: rotate(180deg);
+        }
+
+    }
+}

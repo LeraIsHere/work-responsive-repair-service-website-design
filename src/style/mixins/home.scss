@@ -1,0 +1,30 @@
+.home{
+    @include flex();
+    flex-wrap: wrap;
+    gap: 3rem;
+
+    .btn{
+        @include btn();
+    }
+
+    .image{
+        flex: 1 1 42rem;
+
+        img{
+            width: 100%;
+        }
+    }
+
+    .content{
+        flex: 1 1 42rem;
+
+        h3{
+            @include titleText(4.5rem);
+        }
+
+        p{
+            @include graphText(1.5rem);
+            padding: 1rem 0;
+        }
+    }
+}

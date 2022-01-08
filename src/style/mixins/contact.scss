@@ -1,0 +1,64 @@
+.contact{
+
+    h1{
+        @include heading();
+    }
+
+    .btn{
+        @include btn();
+    }
+
+    .row{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 3rem;
+
+        .map{
+            flex: 1 1 42rem;
+            width: 100%;
+        }
+
+        form{
+            flex: 1 1 42rem;
+            padding: 2rem;
+            border: $border;
+
+            h3{
+                @include titleText(2.5rem);
+                padding-bottom: 1rem;
+            }
+
+            .inputBox{
+                @include flex();
+                flex-wrap: wrap;
+
+                input{
+                    width: 49%;
+                }
+            }
+
+            .inputBox input,
+            textarea{
+                padding: 1.2rem 1.4rem;
+                font-size: 1.6rem;
+                color: $light-color;
+                margin:.7rem 0;
+                border: $border;
+
+                &:focus{
+                    background: $black;
+                    color: $white;
+
+                    &::placeholder{
+                        color: $white;
+                    }
+                }
+            }
+
+            textarea{
+                @include box(100%,15rem);
+                resize: none;
+            }
+        }
+    }
+}

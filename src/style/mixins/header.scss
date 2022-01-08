@@ -1,0 +1,55 @@
+.header{
+
+    .contact-info{
+        padding: 2rem 10%;
+        @include flex();
+        background: $blue;
+
+        p{
+            font-size: 1.5rem;
+            color: $white;
+
+            i{
+                padding-right: .5rem;
+                color: $yellow;
+            }
+        }
+    }
+
+    .navbar{
+        padding: 2rem 10%;
+        @include flex();
+        background: $white;
+        border-bottom: $border;
+        position: relative;
+        z-index: 1000;
+
+        &.active{
+            @include fix-position(0,0,auto,0);
+            border-bottom: none;
+            box-shadow: $box-shadow;
+        }
+
+        .logo{
+            @include titleText(2.5rem);
+            font-weight: bolder;
+
+            i{
+                color: $blue;
+            }
+        }
+
+        .links{
+
+            a{
+                margin-left: 2rem;
+                @include titleText(2rem);
+
+                &:hover{
+                    text-decoration: underline;
+                    color: $blue;
+                }
+            }
+        }
+    }
+}
